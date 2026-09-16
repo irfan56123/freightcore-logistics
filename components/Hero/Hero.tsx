@@ -103,6 +103,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0">
         <div className="freight-grid absolute inset-0 opacity-[0.045]" />
 
+        {/* Main orange glow */}
         <div
           className="
             absolute
@@ -113,14 +114,16 @@ export default function Hero() {
             rounded-full
             bg-accent/10
             blur-[150px]
-            max-md:left-[35%]
-            max-md:top-[18%]
-            max-md:h-[360px]
-            max-md:w-[360px]
-            max-md:blur-[110px]
+            max-md:left-[25%]
+            max-md:top-[15%]
+            max-md:h-[330px]
+            max-md:w-[330px]
+            max-md:bg-accent/[0.075]
+            max-md:blur-[100px]
           "
         />
 
+        {/* Bottom glow */}
         <div
           className="
             absolute
@@ -135,6 +138,23 @@ export default function Hero() {
             max-md:bottom-[-180px]
             max-md:h-[380px]
             max-md:w-[380px]
+          "
+        />
+
+        {/* Mobile subtle ambient glow */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-[-120px]
+            top-[40%]
+            hidden
+            h-[240px]
+            w-[240px]
+            rounded-full
+            bg-accent/[0.035]
+            blur-[90px]
+            max-md:block
           "
         />
       </div>
@@ -177,6 +197,9 @@ export default function Hero() {
           md:min-h-screen
           md:px-10
           lg:px-14
+
+          max-md:justify-start
+          max-md:pt-[99px]
         "
       >
         {/* =================================================
@@ -190,10 +213,28 @@ export default function Hero() {
             max-w-[900px]
             max-md:flex
             max-md:flex-col
-            max-md:pt-[8vh]
           "
         >
-          {/* EYEBROW */}
+          {/* Mobile decorative glow */}
+          <div
+            className="
+              pointer-events-none
+              absolute
+              -left-10
+              top-[55px]
+              hidden
+              h-[180px]
+              w-[280px]
+              rounded-full
+              bg-accent/[0.035]
+              blur-[65px]
+              max-md:block
+            "
+          />
+
+          {/* =================================================
+              EYEBROW
+          ================================================== */}
 
           <motion.div
             initial={{
@@ -212,11 +253,12 @@ export default function Hero() {
               duration: 0.7,
             }}
             className="
+              relative
               mb-7
               flex
               items-center
               gap-3
-              max-md:mb-5
+              max-md:mb-4
             "
           >
             <span
@@ -224,7 +266,7 @@ export default function Hero() {
                 h-px
                 w-10
                 bg-accent
-                max-md:w-7
+                max-md:w-5
               "
             />
 
@@ -236,8 +278,8 @@ export default function Hero() {
                 uppercase
                 tracking-[0.35em]
                 text-muted
-                max-md:text-[8px]
-                max-md:tracking-[0.25em]
+                max-md:text-[7px]
+                max-md:tracking-[0.28em]
               "
             >
               FREIGHT • FLEET • INTELLIGENCE
@@ -267,6 +309,7 @@ export default function Hero() {
             }}
             className="
               hero-heading
+              relative
               font-editorial
               text-[17vw]
               font-black
@@ -275,6 +318,10 @@ export default function Hero() {
               tracking-[-0.075em]
               sm:text-[13vw]
               lg:text-[9.7rem]
+
+              max-md:text-[16.2vw]
+              max-md:leading-[0.79]
+              max-md:tracking-[-0.07em]
             "
           >
             Moving
@@ -293,10 +340,10 @@ export default function Hero() {
                   rounded-full
                   bg-accent
                   shadow-[0_0_25px_rgba(255,107,44,0.8)]
-                  max-md:-right-1.5
-                  max-md:top-[4%]
-                  max-md:h-2
-                  max-md:w-2
+                  max-md:-right-1
+                  max-md:top-[2%]
+                  max-md:h-1.5
+                  max-md:w-1.5
                 "
               />
             </span>
@@ -334,10 +381,10 @@ export default function Hero() {
               text-sm
               leading-7
               text-muted
-              max-md:mt-6
-              max-md:max-w-[340px]
-              max-md:text-[13px]
-              max-md:leading-6
+              max-md:mt-5
+              max-md:max-w-[310px]
+              max-md:text-[10px]
+              max-md:leading-[1.65]
               md:text-base
             "
           >
@@ -373,10 +420,10 @@ export default function Hero() {
               flex
               flex-wrap
               gap-3
-              max-md:mt-7
+              max-md:mt-5
               max-md:w-full
               max-md:flex-col
-              max-md:gap-2.5
+              max-md:gap-2
             "
           >
             <ArrowLink
@@ -409,8 +456,9 @@ export default function Hero() {
                 max-md:w-full
                 max-md:justify-center
                 max-md:px-5
-                max-md:py-3.5
-                max-md:text-[9px]
+                max-md:py-3
+                max-md:text-[8px]
+                max-md:tracking-[0.18em]
               "
             >
               VIEW OUR FLEET
@@ -426,10 +474,292 @@ export default function Hero() {
               </span>
             </a>
           </motion.div>
+
+          {/* =================================================
+              MOBILE NETWORK ACTIVITY
+          ================================================== */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 20,
+            }}
+            animate={
+              loaded
+                ? {
+                    opacity: 1,
+                    y: 0,
+                  }
+                : {}
+            }
+            transition={{
+              delay: 0.65,
+              duration: 0.8,
+            }}
+            className="
+              relative
+              mt-8
+              hidden
+              max-md:block
+            "
+          >
+            <div
+              className="
+                relative
+                overflow-hidden
+                border
+                border-white/[0.07]
+                bg-white/[0.018]
+                px-3
+                py-3
+              "
+            >
+              {/* Top status */}
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span
+                    className="
+                      h-1.5
+                      w-1.5
+                      animate-pulse
+                      rounded-full
+                      bg-accent
+                      shadow-[0_0_10px_rgba(255,107,44,0.8)]
+                    "
+                  />
+
+                  <span
+                    className="
+                      font-mono
+                      text-[6px]
+                      uppercase
+                      tracking-[0.28em]
+                      text-white/45
+                    "
+                  >
+                    NETWORK STATUS
+                  </span>
+                </div>
+
+                <span
+                  className="
+                    font-mono
+                    text-[6px]
+                    uppercase
+                    tracking-[0.2em]
+                    text-accent
+                  "
+                >
+                  LIVE
+                </span>
+              </div>
+
+              {/* Route visualization */}
+              <div className="relative h-[24px]">
+                {/* Base route */}
+                <div
+                  className="
+                    absolute
+                    left-0
+                    right-0
+                    top-1/2
+                    h-px
+                    -translate-y-1/2
+                    bg-white/[0.08]
+                  "
+                />
+
+                {/* Active route */}
+                <motion.div
+                  initial={{
+                    width: "0%",
+                  }}
+                  animate={
+                    loaded
+                      ? {
+                          width: [
+                            "18%",
+                            "72%",
+                            "45%",
+                            "88%",
+                          ],
+                        }
+                      : {}
+                  }
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                  className="
+                    absolute
+                    left-0
+                    top-1/2
+                    h-px
+                    -translate-y-1/2
+                    bg-accent
+                    shadow-[0_0_8px_rgba(255,107,44,0.7)]
+                  "
+                />
+
+                {/* Node 1 */}
+                <span
+                  className="
+                    absolute
+                    left-[12%]
+                    top-1/2
+                    h-1.5
+                    w-1.5
+                    -translate-y-1/2
+                    rounded-full
+                    bg-accent
+                    shadow-[0_0_8px_rgba(255,107,44,0.7)]
+                  "
+                />
+
+                {/* Node 2 */}
+                <span
+                  className="
+                    absolute
+                    left-[42%]
+                    top-1/2
+                    h-1
+                    w-1
+                    -translate-y-1/2
+                    rounded-full
+                    bg-white/40
+                  "
+                />
+
+                {/* Node 3 */}
+                <span
+                  className="
+                    absolute
+                    left-[68%]
+                    top-1/2
+                    h-1.5
+                    w-1.5
+                    -translate-y-1/2
+                    rounded-full
+                    bg-accent
+                  "
+                />
+
+                {/* Node 4 */}
+                <span
+                  className="
+                    absolute
+                    right-[4%]
+                    top-1/2
+                    h-1
+                    w-1
+                    -translate-y-1/2
+                    rounded-full
+                    bg-white/30
+                  "
+                />
+              </div>
+
+              {/* Bottom metrics */}
+              <div
+                className="
+                  mt-3
+                  grid
+                  grid-cols-2
+                  border-t
+                  border-white/[0.06]
+                  pt-3
+                "
+              >
+                <div>
+                  <div
+                    className="
+                      font-mono
+                      text-[10px]
+                      font-bold
+                      tracking-tight
+                      text-white/80
+                    "
+                  >
+                    42
+                  </div>
+
+                  <div
+                    className="
+                      mt-1
+                      font-mono
+                      text-[5px]
+                      uppercase
+                      tracking-[0.2em]
+                      text-white/25
+                    "
+                  >
+                    Countries Connected
+                  </div>
+                </div>
+
+                <div
+                  className="
+                    border-l
+                    border-white/[0.06]
+                    pl-4
+                  "
+                >
+                  <div
+                    className="
+                      font-mono
+                      text-[10px]
+                      font-bold
+                      tracking-tight
+                      text-white/80
+                    "
+                  >
+                    18.6K
+                  </div>
+
+                  <div
+                    className="
+                      mt-1
+                      font-mono
+                      text-[5px]
+                      uppercase
+                      tracking-[0.2em]
+                      text-white/25
+                    "
+                  >
+                    Active Fleet Units
+                  </div>
+                </div>
+              </div>
+
+              {/* Scanning line */}
+              <motion.div
+                animate={{
+                  x: ["-100%", "400%"],
+                }}
+                transition={{
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="
+                  pointer-events-none
+                  absolute
+                  bottom-0
+                  left-0
+                  h-px
+                  w-1/4
+                  bg-accent/70
+                  blur-[1px]
+                "
+              />
+            </div>
+          </motion.div>
         </div>
 
         {/* =====================================================
             3D TRUCK / WEBGL
+            Hidden on mobile
         ====================================================== */}
 
         <motion.div
@@ -457,23 +787,16 @@ export default function Hero() {
           className="
             pointer-events-none
             absolute
+            hidden
             right-[-12%]
             top-[17%]
             z-10
             h-[60vh]
             w-[68vw]
+            md:block
             lg:right-[-8%]
             lg:h-[70vh]
             lg:w-[64vw]
-            max-md:right-[-24%]
-            max-md:top-[7%]
-            max-md:z-10
-            max-md:h-[38vh]
-            max-md:w-[90vw]
-            sm:right-[-20%]
-            sm:top-[8%]
-            sm:h-[44vh]
-            sm:w-[82vw]
           "
         >
           <React.Suspense fallback={<WebGLFallback />}>
@@ -684,9 +1007,10 @@ export default function Hero() {
             md:right-10
             lg:left-14
             lg:right-14
-            max-md:bottom-5
-            max-md:left-5
-            max-md:right-5
+
+            max-md:bottom-4
+            max-md:left-4
+            max-md:right-4
           "
         >
           <div
@@ -696,6 +1020,7 @@ export default function Hero() {
               border-t
               border-border
               sm:grid-cols-3
+              max-md:bg-white/[0.012]
             "
           >
             {stats.map((stat, index) => (
@@ -719,6 +1044,7 @@ export default function Hero() {
                 }}
                 className="
                   group
+                  relative
                   border-b
                   border-border
                   py-3.5
@@ -728,8 +1054,26 @@ export default function Hero() {
                   sm:py-4
                   first:sm:pl-0
                   last:sm:border-r-0
+
+                  max-md:px-2
+                  max-md:py-3
                 "
               >
+                {/* Mobile active indicator */}
+                <span
+                  className="
+                    absolute
+                    bottom-0
+                    left-0
+                    top-0
+                    hidden
+                    w-[2px]
+                    bg-accent
+                    max-md:block
+                    max-md:opacity-40
+                  "
+                />
+
                 <div
                   className="
                     flex
@@ -737,6 +1081,7 @@ export default function Hero() {
                     justify-between
                     gap-4
                     sm:items-end
+                    max-md:pl-2
                   "
                 >
                   <span
@@ -746,6 +1091,7 @@ export default function Hero() {
                       tracking-tight
                       sm:text-3xl
                       md:text-4xl
+                      max-md:text-[17px]
                     "
                   >
                     {stat.value}
@@ -764,6 +1110,10 @@ export default function Hero() {
                       sm:mb-1
                       sm:text-[8px]
                       sm:tracking-[0.18em]
+
+                      max-md:mb-0.5
+                      max-md:text-[5px]
+                      max-md:tracking-[0.18em]
                     "
                   >
                     {stat.label}
