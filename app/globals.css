@@ -1,0 +1,2649 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700;900&family=Syne:wght@700;800&display=swap');
+
+:root {
+  --background: #080808;
+  --secondary: #111111;
+  --primary-text: #F5F5F5;
+  --muted: #8A8A8A;
+  --accent: #FF6B2C;
+  --border: rgba(255, 255, 255, 0.12);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--primary-text);
+  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: hidden;
+}
+
+.font-editorial {
+  font-family: 'Syne', sans-serif;
+}
+
+/* Premium Logistics Background Overlay Grid */
+.bg-grid-pattern {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+
+
+
+/* ============================================
+   FREIGHTCORE CINEMATIC HERO
+============================================ */
+
+.freight-hero {
+  isolation: isolate;
+}
+
+.freight-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0,0,0,0.6) 60%,
+    transparent 100%
+  );
+}
+
+/* Cinematic vignette */
+
+.freight-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 15;
+
+  background:
+    radial-gradient(
+      circle at 65% 45%,
+      transparent 0%,
+      rgba(0,0,0,0.08) 45%,
+      rgba(0,0,0,0.65) 100%
+    );
+}
+
+/* Selection */
+
+.freight-hero ::selection {
+  background: #ff6b2c;
+  color: #080808;
+}
+
+/* Premium link underline */
+
+.freight-hero a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Mobile hero */
+
+@media (max-width: 768px) {
+
+  .freight-hero {
+    min-height: 100svh;
+  }
+
+  .freight-grid {
+    background-size: 45px 45px;
+  }
+
+}
+
+
+/* =========================================================
+   FREIGHTCORE CINEMATIC HERO
+========================================================= */
+
+.freight-hero {
+  isolation: isolate;
+}
+
+.freight-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255,255,255,0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0,0,0,0.5) 65%,
+    transparent 100%
+  );
+}
+
+/* Hero cinematic vignette */
+
+.freight-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 65% 45%,
+      transparent 0%,
+      rgba(0,0,0,0.08) 45%,
+      rgba(0,0,0,0.62) 100%
+    );
+}
+
+/* Better selection */
+
+.freight-hero ::selection {
+  background: var(--accent);
+  color: #080808;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .freight-grid {
+    background-size: 45px 45px;
+  }
+
+  .freight-hero::after {
+    background:
+      linear-gradient(
+        to bottom,
+        transparent 20%,
+        rgba(0,0,0,0.7) 100%
+      );
+  }
+
+}
+
+
+
+.network-panel {
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+}
+
+.network-panel-active {
+  border-color: rgba(255, 107, 44, 0.45) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 107, 44, 0.08),
+    0 20px 80px rgba(0, 0, 0, 0.35);
+}
+
+.network-panel-scan {
+  pointer-events: none;
+}
+
+.network-data-point,
+.network-data-packet,
+.network-live-dot,
+.network-radar-ring {
+  will-change: transform, opacity;
+}
+
+
+
+.network-panel {
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+}
+
+.network-panel-active {
+  border-color: rgba(255, 107, 44, 0.45) !important;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 107, 44, 0.08),
+    0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+.network-panel-scan,
+.network-data-point,
+.network-data-packet,
+.network-live-dot,
+.network-radar-ring {
+  will-change: transform, opacity;
+}
+
+/* =========================================
+   NETWORK
+   ========================================= */
+
+.network-panel {
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+}
+
+.network-panel-active {
+  border-color: rgba(255, 107, 44, 0.45) !important;
+
+  box-shadow:
+    0 0 0 1px rgba(255, 107, 44, 0.08),
+    0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+.network-panel-scan,
+.network-data-point,
+.network-data-packet,
+.network-live-dot,
+.network-radar-ring {
+  will-change: transform, opacity;
+}
+
+
+/* =========================================
+   FLEET
+   ========================================= */
+
+.fleet-stage {
+  isolation: isolate;
+  perspective: 1400px;
+}
+
+.fleet-grid,
+.fleet-visual-grid {
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 50px 50px;
+}
+
+.fleet-visual {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.fleet-module {
+  will-change: transform, opacity;
+  transition:
+    background 0.3s ease;
+}
+
+.fleet-module-active {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.fleet-module-active::before {
+  content: "";
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 2px;
+  height: 100%;
+
+  background: #ff6b2c;
+}
+
+.fleet-node {
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.fleet-core {
+  transform-box: fill-box;
+  transform-origin: center;
+  will-change: transform, opacity;
+}
+
+.fleet-vehicle {
+  filter:
+    drop-shadow(
+      0 0 8px
+      rgba(255, 107, 44, 0.35)
+    );
+
+  will-change: transform;
+}
+
+.fleet-progress {
+  will-change: transform;
+}
+
+@media (max-width: 767px) {
+  .fleet-grid,
+  .fleet-visual-grid {
+    background-size: 32px 32px;
+  }
+
+  .fleet-visual {
+    min-height: 480px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fleet-vehicle,
+  .fleet-core {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.network-viewport {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.network-track {
+  position: relative;
+  min-width: max-content;
+  height: 100%;
+  will-change: transform;
+}
+
+.network-panel {
+  will-change: transform, opacity;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.network-panel-active {
+  border-color: rgba(255, 107, 44, 0.5) !important;
+  box-shadow:
+    0 0 0 1px rgba(255, 107, 44, 0.08),
+    0 20px 80px rgba(0, 0, 0, 0.4);
+}
+
+.network-panel-scan,
+.network-data-point,
+.network-data-packet,
+.network-live-dot,
+.network-radar-ring {
+  will-change: transform, opacity;
+}
+
+@media (max-width: 767px) {
+  .network-viewport {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .network-track {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .network-intro {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+
+/* =========================================================
+   FREIGHTCORE HERO — RESPONSIVE OVERRIDES
+   Desktop composition remains untouched.
+   ========================================================= */
+
+/* -----------------------------------------
+   TABLET
+------------------------------------------ */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+  .freight-hero .hero-heading {
+    font-size: clamp(6rem, 12vw, 8rem);
+    line-height: 0.78;
+  }
+
+  .freight-hero .hero-desc {
+    max-width: 440px;
+  }
+
+  .freight-hero .hero-cta {
+    position: relative;
+    z-index: 50;
+  }
+
+  .freight-hero .hero-meta {
+    bottom: 24px;
+  }
+}
+
+
+/* -----------------------------------------
+   MOBILE
+------------------------------------------ */
+
+@media (max-width: 768px) {
+
+  .freight-hero {
+    min-height: 100svh;
+    height: auto;
+    overflow: hidden;
+  }
+
+  /* Background grid */
+
+  .freight-hero .freight-grid {
+    background-size: 45px 45px;
+    opacity: 0.035;
+  }
+
+  /* Stronger cinematic separation */
+
+  .freight-hero::after {
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(8, 8, 8, 0.05) 0%,
+        rgba(8, 8, 8, 0.15) 28%,
+        rgba(8, 8, 8, 0.72) 62%,
+        rgba(8, 8, 8, 0.98) 100%
+      );
+  }
+
+  /* -----------------------------------------
+     HERO HEADING
+  ------------------------------------------ */
+
+  .freight-hero .hero-heading {
+    position: relative;
+    z-index: 35;
+
+    /*
+      Fixed/clamped sizing prevents
+      giant 17vw text on small phones.
+    */
+    font-size: clamp(4.2rem, 18vw, 7rem);
+
+    line-height: 0.78;
+
+    letter-spacing: -0.075em;
+
+    /*
+      Prevent accidental horizontal overflow
+      caused by editorial typography.
+    */
+    max-width: 100%;
+  }
+
+
+  /* -----------------------------------------
+     EYEBROW
+  ------------------------------------------ */
+
+  .freight-hero .freight-hero-eyebrow {
+    position: relative;
+    z-index: 40;
+  }
+
+
+  /* -----------------------------------------
+     DESCRIPTION
+  ------------------------------------------ */
+
+  .freight-hero .hero-desc {
+    position: relative;
+    z-index: 40;
+
+    max-width: 340px;
+
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+
+  /* -----------------------------------------
+     CTA
+  ------------------------------------------ */
+
+  .freight-hero .hero-cta {
+    position: relative;
+    z-index: 50;
+
+    width: 100%;
+  }
+
+  .freight-hero .hero-cta > * {
+    width: 100%;
+  }
+
+
+  /* -----------------------------------------
+     3D SCENE
+  ------------------------------------------ */
+
+  .freight-hero .hero-scene,
+  .freight-hero canvas {
+    max-width: 100%;
+  }
+
+  /*
+    Make sure the 3D layer stays behind
+    content but remains visible.
+  */
+
+  .freight-hero canvas {
+    pointer-events: none !important;
+  }
+
+
+  /* -----------------------------------------
+     MOBILE STATS
+  ------------------------------------------ */
+
+  .freight-hero .hero-meta {
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    bottom: 18px;
+
+    z-index: 60;
+  }
+
+  .freight-hero .hero-meta > div {
+    background: rgba(8, 8, 8, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .freight-hero .hero-meta .group {
+    min-height: 46px;
+  }
+
+
+  /* -----------------------------------------
+     REMOVE UNNECESSARY MOBILE EFFECTS
+  ------------------------------------------ */
+
+  .freight-hero .hero-heading span > span {
+    box-shadow:
+      0 0 14px
+      rgba(255, 107, 44, 0.6);
+  }
+
+
+  /* -----------------------------------------
+     SAFE AREA
+  ------------------------------------------ */
+
+ 
+}
+
+
+/* -----------------------------------------
+   SMALL PHONES
+------------------------------------------ */
+
+@media (max-width: 420px) {
+
+  .freight-hero .hero-heading {
+    font-size: clamp(
+      3.8rem,
+      17.5vw,
+      5.4rem
+    );
+
+    line-height: 0.79;
+  }
+
+  .freight-hero .hero-desc {
+    max-width: 310px;
+
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .freight-hero .hero-cta a {
+    min-height: 48px;
+  }
+
+  .freight-hero .hero-meta {
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+  }
+
+  .freight-hero .hero-meta .group {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .freight-hero .hero-meta .group > div {
+    gap: 12px;
+  }
+
+  .freight-hero .hero-meta span:first-child {
+    font-size: 20px;
+  }
+}
+
+
+/* -----------------------------------------
+   VERY SMALL DEVICES
+------------------------------------------ */
+
+@media (max-width: 360px) {
+
+  .freight-hero .hero-heading {
+    font-size: 3.45rem;
+  }
+
+  .freight-hero .hero-desc {
+    max-width: 285px;
+    font-size: 11px;
+  }
+
+  .freight-hero .hero-meta {
+    bottom: 10px;
+  }
+
+  .freight-hero .hero-meta .group {
+    min-height: 42px;
+  }
+
+  .freight-hero .hero-meta span:first-child {
+    font-size: 18px;
+  }
+
+  .freight-hero .hero-meta span:last-child {
+    font-size: 6px;
+  }
+}
+
+
+/* -----------------------------------------
+   REDUCED MOTION
+------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .freight-hero *,
+  .freight-hero *::before,
+  .freight-hero *::after {
+    scroll-behavior: auto !important;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .network-viewport {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
+  .network-track {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .network-intro {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    min-height: 100vh;
+  }
+}
+
+
+/* =========================================================
+   NETWORK — MOBILE LAYOUT FIX
+   Desktop horizontal system remains untouched.
+========================================================= */
+
+@media (max-width: 767px) {
+
+  /* -----------------------------------------
+     NETWORK ROOT
+  ------------------------------------------ */
+
+  #network {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+
+  /* -----------------------------------------
+     VIEWPORT
+  ------------------------------------------ */
+
+  #network .network-viewport {
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    height: auto !important;
+    min-height: 100vh;
+
+    overflow: hidden !important;
+  }
+
+
+  /* -----------------------------------------
+     INTRO
+  ------------------------------------------ */
+
+  #network .network-intro {
+    position: relative !important;
+
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    min-height: auto !important;
+
+    padding: 32px 20px 0 !important;
+  }
+
+  #network .network-intro h2 {
+    max-width: 100% !important;
+
+    font-size: clamp(
+      2.7rem,
+      11vw,
+      4rem
+    ) !important;
+
+    line-height: 0.92 !important;
+  }
+
+
+  /* -----------------------------------------
+     BACKGROUND ROUTE
+  ------------------------------------------ */
+
+  #network .network-viewport > div:not(.network-intro):not(.network-track):not(:last-child) {
+    pointer-events: none;
+  }
+
+
+  /* -----------------------------------------
+     TRACK
+     
+     THIS IS THE MAIN FIX.
+     
+     Desktop:
+       absolute + horizontal + w-max
+     
+     Mobile:
+       normal document flow + vertical stack
+  ------------------------------------------ */
+
+  #network .network-track {
+    position: relative !important;
+
+    left: auto !important;
+    top: auto !important;
+
+    transform: none !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 56px 20px 110px !important;
+
+    gap: 18px !important;
+
+    align-items: stretch !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* -----------------------------------------
+     NETWORK CARDS
+  ------------------------------------------ */
+
+  #network .network-panel {
+    position: relative !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    flex: none !important;
+
+    transform: none !important;
+
+    opacity: 1 !important;
+
+    filter: none !important;
+
+    overflow: hidden;
+  }
+
+
+  /* -----------------------------------------
+     FINAL STATEMENT
+  ------------------------------------------ */
+
+  #network .network-track > div:last-child {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
+    height: auto !important;
+
+    min-height: 340px;
+
+    flex: none !important;
+
+    padding: 40px 10px !important;
+  }
+
+  #network .network-track > div:last-child h3 {
+    font-size: clamp(
+      2.2rem,
+      10vw,
+      3.5rem
+    ) !important;
+  }
+
+
+  /* -----------------------------------------
+     HORIZONTAL ROUTE SVG
+     
+     Keep it decorative on mobile,
+     but don't let 3000px SVG affect layout.
+  ------------------------------------------ */
+
+  #network .network-viewport > div {
+    max-width: 100%;
+  }
+
+  #network svg {
+    max-width: none;
+  }
+
+
+  /* -----------------------------------------
+     BOTTOM HUD
+  ------------------------------------------ */
+
+  #network .network-viewport > div:last-child {
+    position: absolute !important;
+
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    overflow: hidden;
+  }
+
+
+  /* -----------------------------------------
+     REMOVE DESKTOP SPACING
+  ------------------------------------------ */
+
+  #network .network-track > .hidden {
+    display: none !important;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 420px) {
+
+  #network .network-intro {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  #network .network-track {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+
+    gap: 14px !important;
+  }
+
+  #network .network-panel {
+    width: 100% !important;
+  }
+}
+
+/* ============================================================
+   FREIGHTCORE — FLEET SECTION
+   Clean standalone CSS
+   ============================================================ */
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+#fleet {
+  position: relative;
+  width: 100%;
+  background: #080808;
+  color: #f5f5f5;
+  overflow: visible;
+}
+
+#fleet .fleet-stage {
+  position: relative;
+  width: 100%;
+  background: #080808;
+  isolation: isolate;
+}
+
+/* subtle technical grid */
+
+#fleet .fleet-stage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.018;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.8) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.8) 1px,
+      transparent 1px
+    );
+  background-size: 55px 55px;
+}
+
+/* keep actual content above grid */
+
+#fleet .fleet-header,
+#fleet .fleet-map-wrapper,
+#fleet .fleet-capabilities,
+#fleet .fleet-telemetry,
+#fleet > .fleet-stage > div:last-child {
+  position: relative;
+  z-index: 10;
+}
+
+
+/* ============================================================
+   DESKTOP
+   ============================================================ */
+
+@media (min-width: 768px) {
+
+  /* ----------------------------------------------------------
+     LONG SCROLL CONTAINER
+     GSAP uses this space for the pinned animation
+     ---------------------------------------------------------- */
+
+  #fleet {
+    height: 380vh;
+    min-height: 380vh;
+  }
+
+  /* ----------------------------------------------------------
+     PINNED VIEWPORT
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-stage {
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ----------------------------------------------------------
+     HEADER
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-header {
+    position: absolute;
+    top: 40px;
+    left: 64px;
+    right: 64px;
+    z-index: 40;
+    padding: 0;
+  }
+
+  #fleet .fleet-header h2 {
+    margin: 0;
+  }
+
+  #fleet .fleet-eyebrow {
+    display: flex;
+    align-items: center;
+  }
+
+  /* ----------------------------------------------------------
+     MAP
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-map-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    z-index: 10;
+
+    width: 52vw;
+    height: 58vh;
+
+    margin: 0;
+
+    transform:
+      translate(-50%, -50%);
+
+    overflow: visible;
+  }
+
+  #fleet .fleet-map-wrapper svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  /* ----------------------------------------------------------
+     SVG ROUTES
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-route-active {
+    fill: none;
+    vector-effect: non-scaling-stroke;
+    stroke-linecap: round;
+  }
+
+  /* ----------------------------------------------------------
+     NETWORK NODES
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-map-node {
+    transform-box: fill-box;
+    transform-origin: center center;
+    vector-effect: non-scaling-stroke;
+  }
+
+  /* ----------------------------------------------------------
+     VEHICLES
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-vehicle {
+    transform-box: fill-box;
+    transform-origin: center center;
+    vector-effect: non-scaling-stroke;
+  }
+
+  /* ----------------------------------------------------------
+     CORE
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-map-wrapper > div {
+    transform-origin: center center;
+  }
+
+  /* ----------------------------------------------------------
+     CAPABILITIES
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-capabilities {
+    position: absolute;
+    left: 64px;
+    bottom: 40px;
+    z-index: 30;
+
+    width: 40%;
+    max-width: 430px;
+
+    padding: 0;
+  }
+
+  #fleet .fleet-capability-button {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    text-align: left;
+    cursor: pointer;
+  }
+
+  #fleet .fleet-capability {
+    width: 100%;
+  }
+
+  #fleet .fleet-capability-button:focus-visible
+  .fleet-capability {
+    outline: 1px solid #ff6b2c;
+    outline-offset: 4px;
+  }
+
+  /* ----------------------------------------------------------
+     TELEMETRY
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-telemetry {
+    position: absolute;
+    right: 32px;
+    top: 55%;
+    z-index: 30;
+
+    display: block;
+
+    width: 190px;
+
+    transform: translateY(-50%);
+  }
+
+  #fleet .fleet-live-value {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ----------------------------------------------------------
+     SCAN LINE
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-scan-line {
+    pointer-events: none;
+    transform-origin: center center;
+  }
+
+  /* ----------------------------------------------------------
+     BOTTOM LABEL
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-stage > div:last-child {
+    z-index: 30;
+  }
+}
+
+
+/* ============================================================
+   LARGE DESKTOP
+   ============================================================ */
+
+@media (min-width: 1280px) {
+
+  #fleet .fleet-header {
+    left: 64px;
+    right: 64px;
+  }
+
+  #fleet .fleet-map-wrapper {
+    width: 52vw;
+    height: 58vh;
+  }
+
+  #fleet .fleet-capabilities {
+    left: 64px;
+  }
+
+  #fleet .fleet-telemetry {
+    right: 64px;
+  }
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  #fleet .fleet-header {
+    left: 40px;
+    right: 40px;
+    top: 32px;
+  }
+
+  #fleet .fleet-map-wrapper {
+    width: 64vw;
+    height: 52vh;
+  }
+
+  #fleet .fleet-capabilities {
+    left: 40px;
+    bottom: 32px;
+    width: 42%;
+  }
+
+  #fleet .fleet-telemetry {
+    right: 32px;
+    width: 160px;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+  /* ----------------------------------------------------------
+     NORMAL DOCUMENT FLOW
+     ---------------------------------------------------------- */
+
+  #fleet {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  #fleet .fleet-stage {
+    position: relative !important;
+
+    width: 100%;
+    height: auto !important;
+    min-height: 100vh;
+
+    overflow: visible !important;
+  }
+
+  /* ----------------------------------------------------------
+     HEADER
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-header {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+
+    z-index: 40;
+
+    width: 100%;
+    padding:
+      96px 24px 0;
+  }
+
+  #fleet .fleet-header h2 {
+    max-width: 100%;
+    font-size: clamp(
+      42px,
+      12vw,
+      64px
+    );
+    line-height: 0.9;
+    letter-spacing: -0.055em;
+  }
+
+  #fleet .fleet-eyebrow {
+    margin-bottom: 16px;
+  }
+
+  /* ----------------------------------------------------------
+     MAP
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-map-wrapper {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+
+    width: 92vw;
+    max-width: 520px;
+    height: 300px;
+
+    margin:
+      48px auto 0;
+
+    transform: none !important;
+
+    overflow: visible;
+  }
+
+  #fleet .fleet-map-wrapper svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+  }
+
+  /* ----------------------------------------------------------
+     ROUTES
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-route-active {
+    fill: none;
+    vector-effect: non-scaling-stroke;
+    stroke-linecap: round;
+  }
+
+  /* ----------------------------------------------------------
+     NODES
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-map-node {
+    transform-box: fill-box;
+    transform-origin: center center;
+    vector-effect: non-scaling-stroke;
+  }
+
+  /* ----------------------------------------------------------
+     VEHICLES
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-vehicle {
+    transform-box: fill-box;
+    transform-origin: center center;
+  }
+
+  /* ----------------------------------------------------------
+     CAPABILITIES
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-capabilities {
+    position: relative !important;
+
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    z-index: 30;
+
+    width: 100% !important;
+    max-width: none !important;
+
+    margin-top: 28px;
+    padding:
+      0 24px 36px;
+  }
+
+  #fleet .fleet-capability-button {
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    outline: none;
+
+    background: transparent;
+
+    text-align: left;
+  }
+
+  #fleet .fleet-capability {
+    width: 100%;
+  }
+
+  #fleet .fleet-capability-button:focus-visible
+  .fleet-capability {
+    outline: 1px solid #ff6b2c;
+    outline-offset: 4px;
+  }
+
+  /* ----------------------------------------------------------
+     MOBILE TELEMETRY
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-telemetry {
+    display: none !important;
+  }
+
+  /* ----------------------------------------------------------
+     MOBILE STATUS
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-stage > div:last-child {
+    position: relative !important;
+
+    width: 100%;
+
+    padding:
+      0 24px 32px;
+  }
+
+  /* ----------------------------------------------------------
+     SCAN
+     ---------------------------------------------------------- */
+
+  #fleet .fleet-scan-line {
+    width: 80%;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  #fleet .fleet-header {
+    padding:
+      88px 20px 0;
+  }
+
+  #fleet .fleet-header h2 {
+    font-size: 43px;
+  }
+
+  #fleet .fleet-map-wrapper {
+    width: 94vw;
+    height: 270px;
+
+    margin-top: 40px;
+  }
+
+  #fleet .fleet-capabilities {
+    margin-top: 20px;
+    padding:
+      0 20px 30px;
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL PHONES
+   ============================================================ */
+
+@media (max-width: 380px) {
+
+  #fleet .fleet-header {
+    padding:
+      80px 18px 0;
+  }
+
+  #fleet .fleet-header h2 {
+    font-size: 39px;
+  }
+
+  #fleet .fleet-map-wrapper {
+    width: 96vw;
+    height: 245px;
+  }
+
+  #fleet .fleet-capabilities {
+    padding:
+      0 18px 28px;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #fleet *,
+  #fleet *::before,
+  #fleet *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ============================================================
+   FREIGHTCORE — NETWORK
+   MOBILE FINAL SYSTEM
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+  /* ==========================================================
+     NETWORK SECTION
+     ========================================================== */
+
+  #network {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    background: #080808 !important;
+  }
+
+
+  /* ==========================================================
+     VIEWPORT
+     ========================================================== */
+
+  #network .network-viewport {
+    position: relative !important;
+
+    display: block !important;
+
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+
+    overflow: visible !important;
+
+    background: #080808 !important;
+  }
+
+
+  /* ==========================================================
+     HEADER
+     ========================================================== */
+
+  #network .network-intro {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    width: 100% !important;
+    height: auto !important;
+
+    padding:
+      88px 20px 0 !important;
+
+    margin: 0 !important;
+
+    z-index: 40 !important;
+  }
+
+  #network .network-intro > div {
+    width: 100%;
+  }
+
+  #network .network-intro h2 {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    font-size:
+      clamp(40px, 11.5vw, 58px) !important;
+
+    line-height: 0.88 !important;
+
+    letter-spacing:
+      -0.055em !important;
+  }
+
+
+  /* ==========================================================
+     BACKGROUND GRID
+     ========================================================== */
+
+  #network .network-viewport
+  > div.pointer-events-none.absolute.inset-0 {
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    pointer-events: none !important;
+
+    z-index: 0 !important;
+  }
+
+
+  /* ==========================================================
+     LEFT GUIDE LINE
+     ========================================================== */
+
+  #network .network-viewport
+  > div.pointer-events-none.absolute.bottom-0.left-6 {
+    position: absolute !important;
+
+    top: 0 !important;
+    bottom: 0 !important;
+
+    left: 20px !important;
+
+    z-index: 5 !important;
+  }
+
+
+  /* ==========================================================
+     HORIZONTAL ROUTE BACKGROUND
+     
+     Keep it decorative.
+     It must NOT affect document height.
+     ========================================================== */
+
+  #network .network-viewport
+  > div.pointer-events-none.absolute.left-0.top-\[63\%\] {
+
+    position: absolute !important;
+
+    top: 390px !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100px !important;
+
+    margin: 0 !important;
+
+    overflow: hidden !important;
+
+    transform: none !important;
+
+    z-index: 1 !important;
+
+    pointer-events: none !important;
+  }
+
+  #network .network-viewport
+  > div.pointer-events-none.absolute.left-0.top-\[63\%\]
+  svg {
+    display: block !important;
+
+    width: 1600px !important;
+    max-width: none !important;
+
+    height: 100px !important;
+  }
+
+
+  /* ==========================================================
+     NETWORK TRACK
+     
+     THIS IS THE MOST IMPORTANT PART.
+     
+     Desktop:
+       absolute
+       horizontal
+       w-max
+     
+     Mobile:
+       normal flow
+       vertical
+       width 100%
+     ========================================================== */
+
+  #network .network-track {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: stretch !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+
+    height: auto !important;
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    padding:
+      52px 0 72px !important;
+
+    gap: 18px !important;
+
+    transform: none !important;
+
+    overflow: visible !important;
+
+    z-index: 10 !important;
+
+    will-change: auto !important;
+  }
+
+
+  /* ==========================================================
+     REMOVE DESKTOP OPENING SPACE
+     ========================================================== */
+
+  #network .network-track
+  > div:first-child {
+    display: none !important;
+  }
+
+
+  /* ==========================================================
+     NETWORK CARD
+     ========================================================== */
+
+  #network .network-panel {
+
+    position: relative !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    flex-shrink: 0 !important;
+
+    width:
+      calc(100% - 32px) !important;
+
+    min-width: 0 !important;
+    max-width: none !important;
+
+    height: 420px !important;
+    min-height: 420px !important;
+
+    margin:
+      0 16px !important;
+
+    padding: 0 !important;
+
+    transform:
+      translate3d(0, 0, 0) !important;
+
+    overflow: hidden !important;
+
+    opacity: 1;
+
+    filter: none;
+
+    background: #0c0c0c !important;
+
+    box-sizing: border-box !important;
+  }
+
+
+  /* ==========================================================
+     CARD CONTENT
+     ========================================================== */
+
+  #network .network-panel
+  > .relative.z-20 {
+
+    position: relative !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: space-between !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    padding: 24px !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 20 !important;
+  }
+
+
+  /* ==========================================================
+     CARD HEADER
+     ========================================================== */
+
+  #network .network-panel
+  > div.absolute.left-6.right-6.top-6 {
+
+    top: 20px !important;
+    left: 20px !important;
+    right: 20px !important;
+
+    z-index: 40 !important;
+  }
+
+
+  /* ==========================================================
+     CARD TITLE
+     ========================================================== */
+
+  #network .network-panel h3 {
+
+    position: relative !important;
+
+    z-index: 30 !important;
+
+    width: auto !important;
+    max-width: 72% !important;
+
+    margin: 0 !important;
+
+    font-size:
+      clamp(38px, 10.5vw, 50px) !important;
+
+    line-height:
+      0.9 !important;
+
+    letter-spacing:
+      -0.055em !important;
+  }
+
+
+  /* ==========================================================
+     CARD DESCRIPTION
+     ========================================================== */
+
+  #network .network-panel
+  p.mt-5 {
+
+    position: relative !important;
+
+    z-index: 30 !important;
+
+    max-width: 72% !important;
+
+    margin-top: 16px !important;
+
+    font-size: 11px !important;
+
+    line-height: 1.7 !important;
+  }
+
+
+  /* ==========================================================
+     METRIC
+     ========================================================== */
+
+  #network .network-panel
+  p:not(.mt-5) {
+
+    position: relative;
+
+    z-index: 30;
+  }
+
+
+  /* ==========================================================
+     RADAR
+     ========================================================== */
+
+  #network .network-radar-ring {
+
+    right: -75px !important;
+
+    top: 50% !important;
+
+    width: 260px !important;
+    height: 260px !important;
+
+    transform-origin:
+      center center !important;
+
+    z-index: 5 !important;
+  }
+
+
+  #network .network-radar-ring
+  > div {
+
+    pointer-events: none !important;
+  }
+
+
+  /* ==========================================================
+     CENTER RADAR NODE
+     ========================================================== */
+
+  #network .network-center-node {
+
+    z-index: 10 !important;
+
+    transform-origin:
+      center center !important;
+  }
+
+
+  /* ==========================================================
+     DATA POINTS
+     ========================================================== */
+
+  #network .network-data-point {
+
+    z-index: 15 !important;
+
+    pointer-events: none !important;
+  }
+
+
+  /* ==========================================================
+     DATA PACKET
+     ========================================================== */
+
+  #network .network-data-packet {
+
+    z-index: 15 !important;
+
+    pointer-events: none !important;
+  }
+
+
+  /* ==========================================================
+     SCAN LINE
+     ========================================================== */
+
+  #network .network-panel-scan {
+
+    top: 0 !important;
+    bottom: 0 !important;
+
+    z-index: 25 !important;
+
+    opacity: 0.5;
+  }
+
+
+  /* ==========================================================
+     ORANGE PROGRESS
+     ========================================================== */
+
+  #network .network-panel-progress {
+
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 2px !important;
+
+    z-index: 60 !important;
+
+    transform-origin:
+      left center !important;
+  }
+
+
+  /* ==========================================================
+     FINAL STATEMENT
+     ========================================================== */
+
+  #network .network-track
+  > div:last-child {
+
+    position: relative !important;
+
+    display: flex !important;
+
+    flex-shrink: 0 !important;
+
+    width:
+      calc(100% - 32px) !important;
+
+    min-width: 0 !important;
+
+    max-width: none !important;
+
+    height: 340px !important;
+
+    min-height: 340px !important;
+
+    margin:
+      8px 16px 0 !important;
+
+    padding:
+      24px !important;
+
+    box-sizing: border-box !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+
+  #network .network-track
+  > div:last-child > div {
+
+    width: 100% !important;
+  }
+
+
+  #network .network-track
+  > div:last-child h3 {
+
+    max-width: 100% !important;
+
+    font-size:
+      clamp(38px, 10vw, 50px) !important;
+
+    line-height:
+      0.9 !important;
+  }
+
+
+  #network .network-track
+  > div:last-child p {
+
+    max-width: 100% !important;
+  }
+
+
+  /* ==========================================================
+     BOTTOM HUD
+     
+     It must participate in normal flow.
+     ========================================================== */
+
+  #network .network-viewport
+  > div.absolute.bottom-0.left-0.right-0 {
+
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding:
+      14px 20px !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 50 !important;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  #network .network-intro {
+    padding:
+      82px 18px 0 !important;
+  }
+
+  #network .network-intro h2 {
+    font-size:
+      41px !important;
+  }
+
+  #network .network-track {
+    padding-top:
+      42px !important;
+
+    gap:
+      16px !important;
+  }
+
+  #network .network-panel {
+    width:
+      calc(100% - 24px) !important;
+
+    height:
+      390px !important;
+
+    min-height:
+      390px !important;
+
+    margin-left:
+      12px !important;
+
+    margin-right:
+      12px !important;
+  }
+
+  #network .network-panel
+  > .relative.z-20 {
+    padding:
+      20px !important;
+  }
+
+  #network .network-panel h3 {
+    font-size:
+      37px !important;
+  }
+
+  #network .network-panel
+  p.mt-5 {
+    max-width:
+      70% !important;
+  }
+
+  #network .network-radar-ring {
+    width:
+      220px !important;
+
+    height:
+      220px !important;
+
+    right:
+      -70px !important;
+  }
+
+  #network .network-track
+  > div:last-child {
+    width:
+      calc(100% - 24px) !important;
+
+    margin-left:
+      12px !important;
+
+    margin-right:
+      12px !important;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  #network *,
+  #network *::before,
+  #network *::after {
+
+    animation-duration:
+      0.001ms !important;
+
+    animation-iteration-count:
+      1 !important;
+
+    transition-duration:
+      0.001ms !important;
+
+    scroll-behavior:
+      auto !important;
+  }
+}
+
+/* ============================================================
+   IMPACT — MOBILE FINAL
+   ============================================================ */
+
+@media (max-width: 767px) {
+
+  #impact {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    background: #080808 !important;
+  }
+
+  #impact > div {
+    width: 100% !important;
+    min-height: 0 !important;
+
+    padding:
+      82px 16px 60px !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+
+  /* ==========================================================
+     HEADER
+     ========================================================== */
+
+  #impact .impact-eyebrow {
+    margin-bottom: 16px !important;
+  }
+
+  #impact .impact-heading {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    font-size:
+      clamp(46px, 13vw, 64px) !important;
+
+    line-height:
+      0.84 !important;
+
+    letter-spacing:
+      -0.07em !important;
+  }
+
+  #impact .impact-description {
+    width: 100% !important;
+    max-width: 320px !important;
+
+    margin-top: 25px !important;
+  }
+
+  #impact .impact-description p {
+    font-size: 11px !important;
+    line-height: 1.7 !important;
+    color: #6d6d6d !important;
+  }
+
+  #impact .impact-description
+  > div:last-child {
+    margin-top: 18px !important;
+  }
+
+
+  /* ==========================================================
+     DIVIDER
+     ========================================================== */
+
+  #impact .impact-description + div {
+    width: 100% !important;
+
+    margin-top:
+      32px !important;
+  }
+
+
+  /* ==========================================================
+     🔥 THIS IS THE IMPORTANT PART
+     
+     Find the actual parent containing the four metrics
+     and force it to 2 columns.
+     ========================================================== */
+
+  #impact div:has(> .impact-metric) {
+
+    display: grid !important;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr)) !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    border-top:
+      1px solid
+      rgba(255,255,255,0.10) !important;
+
+    border-left:
+      1px solid
+      rgba(255,255,255,0.10) !important;
+
+    gap: 0 !important;
+  }
+
+
+  /* ==========================================================
+     METRIC
+     ========================================================== */
+
+  #impact .impact-metric {
+
+    position: relative !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: space-between !important;
+
+    width: 100% !important;
+
+    height: 175px !important;
+
+    min-height: 175px !important;
+
+    margin: 0 !important;
+
+    padding:
+      14px 12px !important;
+
+    box-sizing: border-box !important;
+
+    border: 0 !important;
+
+    border-right:
+      1px solid
+      rgba(255,255,255,0.10) !important;
+
+    border-bottom:
+      1px solid
+      rgba(255,255,255,0.10) !important;
+
+    overflow: hidden !important;
+
+    background:
+      rgba(255,255,255,0.008) !important;
+  }
+
+
+  /* ==========================================================
+     SUBTLE ORANGE GLOW
+     ========================================================== */
+
+  #impact .impact-metric::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -55px;
+    bottom: -55px;
+
+    border-radius: 50%;
+
+    background:
+      radial-gradient(
+        circle,
+        rgba(255,107,44,0.10),
+        transparent 70%
+      );
+
+    pointer-events: none;
+  }
+
+
+  /* ==========================================================
+     TOP ROW
+     ========================================================== */
+
+  #impact .impact-metric
+  > div:first-child {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+  }
+
+
+  /* ==========================================================
+     NUMBER ID
+     ========================================================== */
+
+  #impact .impact-metric
+  > div:first-child span {
+
+    font-size:
+      7px !important;
+
+    letter-spacing:
+      0.16em !important;
+  }
+
+
+  /* ==========================================================
+     ICON
+     ========================================================== */
+
+  #impact .impact-metric
+  > div:first-child svg {
+
+    width: 12px !important;
+    height: 12px !important;
+
+    color: #3e3e3e !important;
+  }
+
+
+  /* ==========================================================
+     BIG NUMBER
+     ========================================================== */
+
+  #impact .impact-metric
+  > div:nth-child(2) {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    font-size:
+      clamp(40px, 11vw, 54px) !important;
+
+    line-height:
+      0.82 !important;
+
+    letter-spacing:
+      -0.065em !important;
+
+    color:
+      #f3f3f3 !important;
+
+    white-space:
+      nowrap !important;
+  }
+
+
+  /* ==========================================================
+     LABEL
+     ========================================================== */
+
+  #impact .impact-metric
+  > div:nth-child(3) {
+
+    position: relative;
+
+    z-index: 3;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+  }
+
+  #impact .impact-label {
+
+    max-width: 90px !important;
+
+    font-size:
+      6px !important;
+
+    line-height:
+      1.4 !important;
+
+    letter-spacing:
+      0.10em !important;
+
+    color:
+      #5e5e5e !important;
+  }
+
+
+  /* ==========================================================
+     MARKER
+     ========================================================== */
+
+  #impact .impact-marker {
+
+    width: 4px !important;
+    height: 4px !important;
+  }
+
+
+  /* ==========================================================
+     BOTTOM ORANGE LINE
+     ========================================================== */
+
+  #impact .impact-metric
+  > div:last-child {
+
+    position: relative;
+
+    z-index: 4;
+
+    width: 100% !important;
+
+    height: 1px !important;
+
+    margin: 0 !important;
+
+    background:
+      rgba(255,255,255,0.08) !important;
+
+    overflow: hidden !important;
+  }
+
+  #impact .impact-metric
+  > div:last-child > div {
+
+    width: 45% !important;
+
+    height: 100% !important;
+
+    background:
+      #ff6b2c !important;
+
+    transform-origin:
+      left center !important;
+  }
+
+
+  /* ==========================================================
+     BOTTOM STATEMENT
+     ========================================================== */
+
+  #impact .impact-metric:last-child
+  + div {
+
+    grid-column:
+      1 / -1 !important;
+
+    width: 100% !important;
+
+    margin-top:
+      24px !important;
+
+    padding-top:
+      20px !important;
+
+    border-top:
+      1px solid
+      rgba(255,255,255,0.08) !important;
+
+    display: flex !important;
+
+    justify-content: space-between !important;
+
+    align-items: flex-start !important;
+  }
+
+  #impact .impact-metric:last-child
+  + div p {
+
+    max-width: 220px !important;
+
+    font-size: 9px !important;
+
+    line-height: 1.7 !important;
+
+    color: #505050 !important;
+  }
+}
+
+
+/* ============================================================
+   SMALL PHONE
+   ============================================================ */
+
+@media (max-width: 390px) {
+
+  #impact > div {
+    padding:
+      76px 13px 52px !important;
+  }
+
+  #impact .impact-heading {
+    font-size: 43px !important;
+  }
+
+  #impact .impact-metric {
+    height: 160px !important;
+    min-height: 160px !important;
+
+    padding:
+      13px 10px !important;
+  }
+
+  #impact .impact-metric
+  > div:nth-child(2) {
+    font-size: 37px !important;
+  }
+}
+
+
