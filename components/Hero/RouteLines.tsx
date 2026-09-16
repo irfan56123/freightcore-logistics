@@ -1,21 +1,32 @@
 "use client";
 
-import React from "react";
 import * as THREE from "three";
+import { Line } from "@react-three/drei";
 
-export default function RouteLines() {
-  const points = [
-    new THREE.Vector3(-2, -1, 0),
-    new THREE.Vector3(-1, 2, 1),
-    new THREE.Vector3(2, 1, -1),
-    new THREE.Vector3(1, -2, 0),
-    new THREE.Vector3(-2, -1, 0),
-  ];
-  const geometry = new THREE.BufferGeometry().setFromPoints(points);
+type RouteLinesProps = {
+  points?: [number, number, number][];
+};
+
+export default function RouteLines({
+  points = [
+    [-2.8, 0.2, 0],
+    [-1.4, 0.8, 0],
+    [0, 0.3, 0],
+    [1.5, 1, 0],
+    [2.8, 0.5, 0],
+  ],
+}: RouteLinesProps) {
+  const vectorPoints = points.map(
+    ([x, y, z]) => new THREE.Vector3(x, y, z)
+  );
 
   return (
-    <line geometry={geometry}>
-      <lineBasicMaterial color="#FF6B2C" linewidth={1} opacity={0.6} transparent />
-    </line>
+    <Line
+      points={vectorPoints}
+      color="#FF6B2C"
+      lineWidth={1}
+      transparent
+      opacity={0.6}
+    />
   );
 }
